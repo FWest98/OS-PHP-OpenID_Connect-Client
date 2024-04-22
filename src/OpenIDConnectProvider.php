@@ -360,7 +360,7 @@ final class OpenIDConnectProvider extends GenericProvider
             if (isset($jwk['use']) && $jwk['use'] !== 'sig') {
                 return false;
             }
-            if ($jwk['alg'] !== $this->signer->getAlgorithmId()) {
+            if ($jwk['alg'] !== $this->signer->algorithmId()) {
                 return false;
             }
 
